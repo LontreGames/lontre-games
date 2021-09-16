@@ -71,7 +71,7 @@
   height: 82vh;
 }
 #wrapper .inner .main .main_inner .main_wrapper {
-  padding: 160px 0 0px;
+  padding: 100px 0 0px;
 }
 #wrapper .inner .main .main_inner .main_wrapper #main_box {
   width: 100%;
@@ -81,6 +81,8 @@
   padding: 300px ​0px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 #wrapper .inner .main .main_inner .main_wrapper #main_box li {
   border: black solid;
@@ -96,6 +98,10 @@
   color: #333;
   line-height: 50px;
   overflow: hidden;
+}
+#wrapper .inner .main .main_inner .main_wrapper #main_box li:nth-child(1) {
+  margin: 0 230px;
+  margin-bottom: 50px;
 }
 #wrapper .inner .main .main_inner .main_wrapper #main_box li:before, #wrapper .inner .main .main_inner .main_wrapper #main_box li:after {
   position: absolute;

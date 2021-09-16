@@ -69,12 +69,13 @@
                 height: 82vh;
                 .main_wrapper{
                     // height: 80vh;
-                    padding: 160px 0 0px;
+                    padding: 100px 0 0px;
                     #main_box{
                         width: 100%;
                         display: flex;
                         padding: 300px ​0px;
                         justify-content: space-around;
+                        flex-wrap: wrap;
                         li{
                             border: black solid;
                             width: 40%;
@@ -88,6 +89,10 @@
                             color: #333;
                             line-height: 50px;
                             overflow: hidden;
+                            &:nth-child(1){
+                                margin: 0 230px;
+                                margin-bottom: 50px;
+                            }
                             &:before,
                             &:after {
                                 position: absolute;
