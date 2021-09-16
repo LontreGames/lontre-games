@@ -69,17 +69,20 @@
                 height: 82vh;
                 .main_wrapper{
                     // height: 80vh;
-                    padding: 250px 0 0px;
+                    padding: 150px 0 0px;
                     #main_box{
                         width: 100%;
                         display: flex;
                         padding: 300px ​0px;
                         justify-content: space-around;
+                        flex-flow: column;
+                        align-items: center;
                         li{
                             border: black solid;
                             width: 40%;
                             justify-content: center;
                             text-align: center;
+                            margin-bottom: 50px;
 
                             position: relative;
                             z-index: 2;
@@ -119,6 +122,9 @@
                                 -webkit-transform: scale(1);
                                 transform: scale(1);
                                 background: rgba(255, 162, 81, 0.7);
+                            }
+                            &:nth-child(2){
+                                pointer-events: none;   
                             }
                             .main_content{
                                 padding: 20px 0;
