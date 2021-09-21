@@ -1,10 +1,21 @@
 @charset "UTF-8";
+// $breakpoints: (
+//   'sm': 'screen and (min-width: 400px)',
+//   'md': 'screen and (min-width: 768px)',
+//   'lg': 'screen and (min-width: 1000px)',
+//   'xl': 'screen and (min-width: 1200px)',
+// ) !default;
+
 $breakpoints: (
-  'sm': 'screen and (min-width: 400px)',
-  'md': 'screen and (min-width: 768px)',
-  'lg': 'screen and (min-width: 1000px)',
-  'xl': 'screen and (min-width: 1200px)',
-) !default;
+  s: 'screen and (max-width: 767px)',
+  m: 'screen and (max-width: 1024px)',
+  l: 'screen and (max-width: 1280px)'
+);
+@mixin mq($bp) {
+    @media #{map-get($breakpoints, $bp)} {
+        @content;
+    }
+}
 
 #wrapper{
     .inner{
@@ -74,16 +85,13 @@ $breakpoints: (
                 width: 920px;
                 padding: 100px 0 0px;
 
-                @mixin mq($breakpoint:ms){
+                @include mq(s){
                     width: 400px;
                 }
-                @mixin mq($breakpoint:md){
+                @include mq(m){
                     width: 768px;
                 }
-                @mixin mq($breakpoint:lg){
-                    width: 920px;
-                }
-                @mixin mq($breakpoint:xl){
+                @include mq(l){
                     width: 920px;
                 }
             }
